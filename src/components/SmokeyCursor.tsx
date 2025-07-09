@@ -9,21 +9,37 @@ export default function SmokeyCursor() {
     document.body.appendChild(cursor);
 
     const sparkles: HTMLDivElement[] = [];
+    let timeoutId: NodeJS.Timeout;
 
     const move = (e: MouseEvent) => {
       cursor.style.left = e.clientX + "px";
       cursor.style.top = e.clientY + "px";
 
-      const sparkle = document.createElement("div");
-      sparkle.className = "sparkle";
-      sparkle.style.left = e.clientX + "px";
-      sparkle.style.top = e.clientY + "px";
-      document.body.appendChild(sparkle);
-      sparkles.push(sparkle);
+      cursor.style.opacity = "1";
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => {
+        cursor.style.opacity = "0";
+      }, 150);
 
-      setTimeout(() => {
-        sparkle.remove();
-      }, 600);
+      // Create multiple sparkles around the cursor
+      for (let i = 0; i < 3; i++) {
+        const sparkle = document.createElement("div");
+        sparkle.className = "sparkle";
+
+        const offsetX = (Math.random() - 0.5) * 30;
+        const offsetY = (Math.random() - 0.5) * 30;
+        const scale = 0.6 + Math.random() * 1.4;
+
+        sparkle.style.left = `${e.clientX + offsetX}px`;
+        sparkle.style.top = `${e.clientY + offsetY}px`;
+        sparkle.style.transform = `translate(-50%, -50%) scale(${scale})`;
+        document.body.appendChild(sparkle);
+        sparkles.push(sparkle);
+
+        setTimeout(() => {
+          sparkle.remove();
+        }, 800);
+      }
     };
 
     document.addEventListener("mousemove", move);
@@ -42,45 +58,36 @@ export default function SmokeyCursor() {
         width: 32px;
         height: 32px;
         border-radius: 50%;
-        background: radial-gradient(circle, rgba(255,105,180,0.7), rgba(255,105,180,0.2));
+        background: radial-gradient(circle, rgba(230, 60, 130, 0.25), rgba(230, 60, 130, 0.05));
         pointer-events: none;
         transform: translate(-50%, -50%);
         z-index: 9999;
-        box-shadow: 0 0 20px rgba(255, 105, 180, 0.9);
-        mix-blend-mode: screen;
-        animation: neon-pulse 1.5s infinite;
+        opacity: 0;
+        transition: opacity 0.2s ease;
+        filter: blur(4px);
       }
 
       .sparkle {
         position: fixed;
-        width: 10px;
-        height: 10px;
+        width: 12px;
+        height: 12px;
         border-radius: 50%;
-        background: radial-gradient(circle, rgba(255, 255, 255, 0.8), rgba(255, 182, 193, 0));
-        box-shadow: 0 0 10px rgba(255, 192, 203, 0.7);
+        background: radial-gradient(circle, rgba(255, 180, 200, 0.5), rgba(230, 60, 130, 0));
+        box-shadow: 0 0 15px rgba(230, 60, 130, 0.3);
         pointer-events: none;
-        transform: translate(-50%, -50%) scale(1);
-        animation: sparkle-fade 0.6s ease-out forwards;
+        animation: sparkle-fade 0.8s ease-out forwards;
         z-index: 9998;
+        filter: blur(3px);
       }
 
       @keyframes sparkle-fade {
         0% {
           opacity: 1;
-          transform: translate(-50%, -50%) scale(1);
+          transform: scale(1);
         }
         100% {
           opacity: 0;
-          transform: translate(-50%, -50%) scale(1.8);
-        }
-      }
-
-      @keyframes neon-pulse {
-        0%, 100% {
-          box-shadow: 0 0 20px rgba(255,105,180,0.8), 0 0 40px rgba(255,105,180,0.5);
-        }
-        50% {
-          box-shadow: 0 0 30px rgba(255,20,147,0.9), 0 0 60px rgba(255,20,147,0.7);
+          transform: scale(2.5);
         }
       }
     `}</style>

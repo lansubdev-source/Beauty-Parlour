@@ -25,7 +25,7 @@ export default function Gallery() {
             whileHover={{
               scale: 1.15,
               rotate: 2,
-              boxShadow: "0px 12px 30px rgba(255, 105, 180, 0.5)", // deeper pink glow
+              boxShadow: "0px 12px 30px rgba(255, 105, 180, 0.5)",
               transition: { type: "spring", stiffness: 300, damping: 20 },
             }}
             className="rounded-xl overflow-hidden cursor-pointer bg-white shadow-md hover:shadow-pink-400 transform-gpu"
@@ -42,7 +42,6 @@ export default function Gallery() {
         ))}
       </div>
 
-      {/* Fullscreen Modal View */}
       <AnimatePresence>
         {active && (
           <motion.div

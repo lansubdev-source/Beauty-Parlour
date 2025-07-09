@@ -26,18 +26,6 @@ export default function Home() {
       <Gallery />
       <ContactBanner/>
       <AboutSection/>
-
-      {/* Contact Section */}
-      <motion.section
-        id="contact"
-        className="py-16 bg-pink-50 text-center"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-      >
-      </motion.section>
-
       <Footer />
     </>
   );

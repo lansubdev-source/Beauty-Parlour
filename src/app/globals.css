@@ -45,3 +45,11 @@ body {
 .animate-float-medium {
   animation: float-medium 8s ease-in-out infinite;
 }
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.03); }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 8s ease-in-out infinite;
+}

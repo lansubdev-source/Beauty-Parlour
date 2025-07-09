@@ -3,7 +3,7 @@ import { FaRegCircle } from "react-icons/fa";
 
 const OpenHours = () => {
   return (
-    <section className="flex flex-col md:flex-row items-center justify-center px-6 py-20 bg-white">
+    <section className="flex flex-col md:flex-row items-center justify-center px-6 py-20 bg-pink-100">
       {/* Image Section */}
       <div className="w-full md:w-1/2 max-w-xl">
         <img

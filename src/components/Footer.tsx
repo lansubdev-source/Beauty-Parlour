@@ -4,13 +4,20 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-pink-300/70 py-12 px-6">
+    <footer className="bg-black text-pink-300/70 py-20 px-6 min-h-[400px]">
       <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-10 text-sm">
         {/* Quick Links */}
         <div>
           <h4 className="font-semibold mb-4">Quick Links</h4>
           <ul className="space-y-2">
-            {["Home", "About Us", "Contact Us", "Franchise Opportunities", "Blogs", "Privacy Policy"].map(link => (
+            {[
+              "Home",
+              "About Us",
+              "Contact Us",
+              "Franchise Opportunities",
+              "Blogs",
+              "Privacy Policy",
+            ].map((link) => (
               <li key={link}>
                 <a href="#" className="hover:underline">{link}</a>
               </li>
@@ -22,7 +29,14 @@ export default function Footer() {
         <div>
           <h4 className="font-semibold mb-4">Our Services</h4>
           <ul className="space-y-2">
-            {["Hair Care", "Skin Care", "Body Care", "Events", "Locate us", "Contact Us"].map(service => (
+            {[
+              "Hair Care",
+              "Skin Care",
+              "Body Care",
+              "Events",
+              "Locate us",
+              "Contact Us",
+            ].map((service) => (
               <li key={service}>
                 <a href="#" className="hover:underline">{service}</a>
               </li>
@@ -33,13 +47,13 @@ export default function Footer() {
         {/* Contact Us */}
         <div>
           <h4 className="font-semibold mb-4">Contact Us</h4>
-            <p className="text-sm mb-2">
+          <p className="text-sm mb-2">
             📍 Beauty Lounge Parlour<br />
             No. 45, 2nd Floor, Orchid Plaza,<br />
             MG Road, Near City Mall,<br />
             Indiranagar, Bengaluru,<br />
             Karnataka 560038
-            </p>
+          </p>
 
           <p className="mt-4 font-semibold">🏬 Store Locator</p>
           <ul className="ml-4 mt-1 space-y-1">

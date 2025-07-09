@@ -17,7 +17,7 @@ const images = [
 
 const InfraGallery = () => {
   return (
-    <section className="py-16 bg-white text-center">
+    <section className="py-16 bg-pink-100 text-center">
       <p className="text-sm font-bold text-pink-400 uppercase tracking-wide">
         Beyond Beauty
       </p>
