@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 💄 Beauty Lounge Parlour – Modern Salon Website (Next.js + Tailwind CSS)
+
+Beauty Lounge Parlour is a modern, responsive salon website built with Next.js, React, TypeScript, Tailwind CSS, and Framer Motion. It highlights services, gallery, working hours, beauty packages, contact details, and elegant UI animations for a premium, mobile-first user experience.
+
+---
+
+## About
+A polished website template for professional beauty parlours that focuses on clean aesthetics, smooth interactions, and easy customization.
+
+---
+
+## Key Features
+- Modern UI/UX with smooth animations (Framer Motion)  
+- Smokey cursor effect for a premium feel  
+- Hero, About, Services, Gallery, Working Hours, Contact sections  
+- Floating WhatsApp button for instant bookings  
+- Responsive design (mobile, tablet, desktop)  
+- Option for Google Maps integration
+
+---
+
+## Tech Stack
+- Next.js (App Router)  
+- React 18  
+- TypeScript  
+- Tailwind CSS  
+- Framer Motion  
+- Lucide Icons
+
+Custom components:
+- Smokey Cursor, Hero, About, Services Cards, Gallery Grid, Contact, Footer, Floating WhatsApp Button
+
+---
 
 ## Getting Started
 
-First, run the development server:
-
+1. Install dependencies
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Run development server
+```bash
+npm run dev
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Open http://localhost:3000
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Customization
 
-To learn more about Next.js, take a look at the following resources:
+Update images:
+- /public/images
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Update global styles and Tailwind config:
+- globals.css
+- tailwind.config.js
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Edit text and components:
+- /src/components/
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Components Overview
+- Hero Section — welcoming hero with visuals  
+- About Section — salon mission and values  
+- Services — service cards with icons  
+- Gallery — responsive grid with hover animations  
+- Open Hours — weekly timings layout  
+- Smokey Cursor — animated cursor effect  
+- WhatsApp Floating Button — quick booking action  
+- Navbar & Footer — responsive layout and navigation
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## Future Enhancements
+- Online booking form  
+- Admin dashboard to manage services  
+- Customer testimonials section  
+- Blog for beauty tips  
+- Multi-language support  
+- PWA support (installable app)
+
+---
+
+## Author
+Designed & developed by Jeffrin M.  
+Beauty Lounge Parlour Website Project
